@@ -18,7 +18,7 @@ float *create_rand_nums(int num_elements) {
 
 
 float compute_avg(float *array, int num_elements) {
-  float sum = 0.f;
+  float sum = 0.0f;
   int i;
   for (i = 0; i < num_elements; i++) {
     sum += array[i];
@@ -28,7 +28,7 @@ float compute_avg(float *array, int num_elements) {
 
 
 int main(int argc, char** argv){
-	int elements_per_proc = 1;
+	int elements_per_proc = 4;
 	srand(time(NULL));
 	MPI_Init(NULL, NULL);
 	
