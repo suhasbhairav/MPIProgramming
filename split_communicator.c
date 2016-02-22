@@ -20,7 +20,7 @@ int main(int argc, char **argv){
 	MPI_Comm_rank(row_comm, &row_rank);
 	printf("World Rank/Size = %d/%d \t Row Rank/Size = %d/%d\n", world_rank, world_size, row_rank, row_size);
 
-
+	MPI_Comm_free(&row_comm);
 
 	MPI_Finalize();
 
